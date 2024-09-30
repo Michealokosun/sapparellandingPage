@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
   --background: #ffffff;
@@ -18,10 +19,78 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.logo-text {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.app_features {
+  background: rgb(255, 77, 45);
+  background: linear-gradient(
+    0deg,
+    rgb(250, 64, 31) 0%,
+    rgba(247, 144, 126, 1) 100%
+  );
+}
+
+.line-top {
+  top: 20%;
+}
+
+.line-bottom {
+  bottom: 20%;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 190px;
+}
+
+.swiper-slide img {
+  display: block;
+  margin-inline: auto;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff4700 !important;
+}
+
+@media only screen and (max-width: 40rem) {
+  .line-top {
+    top: 10%;
+  }
+
+  .line-bottom {
+    bottom: 10%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    margin-inline: auto;
+    width: 80%;
+    border-radius: 15px;
+  }
+
+  .screenshot_phone {
+    top: -1.8rem;
   }
 }
