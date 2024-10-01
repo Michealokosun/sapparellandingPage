@@ -4,15 +4,7 @@ import { HeroComponent } from "../components/hero-.component";
 import handicon from "../assests/images/carry-ic.png";
 import location from "../assests/images/location-ic.png";
 import storeicon from "../assests/images/store-ic.png";
-import playstore from "../assests/images/Group 46.png";
-import applestore from "../assests/images/Vector.png";
-import phonemockup from "../assests/images/hero-img-shop.png";
-import burger from "../assests/images/burger.png";
-import backgrounoverlay from "../assests/images/hero-right-bg.png";
-import fearuresmockup from "../assests/images/features-hero-img.png";
 import "animate.css";
-
-import lindedot from "../assests/images/Group 570.png";
 import { ScreenShootPage } from "../components/screenshot.component";
 import { Testimonies } from "../components/testimonial_section";
 import { SectionHeader } from "../components/sectionHeader";
@@ -20,6 +12,8 @@ import countactusImage from "../assests/images/image 295.png";
 import { Footer } from "../components/footer";
 import { Scrollanimation } from "../components/Scrollanimation";
 import { AppDownlaodSection } from "../components/app_download_section";
+import { Features } from "../components/Features";
+import { InnovativeSection } from "../components/innovative.section";
 
 export default function Home() {
   return (
@@ -95,114 +89,11 @@ export default function Home() {
       </section>
       {/* ----------app download section */}
       <section>
-        <div id="features" className="max-w-7xl py-20 mx-auto my-20 px-10">
-          <div className="downlaod_row gap-10 flex flex-col-reverse md:flex-row justify-around items-center">
-            <div className="col1 text-center max-w-xl">
-              <h1 className="text-2xl capitalize">
-                the innovative way to shop{" "}
-              </h1>
-              <p className="text-gray-400 mt-2">
-                When you join DeliverZe you will enjoy our new and improved way
-                of shopping through our virtual mall experience
-              </p>
-              <div className="download_buttons justify-center mt-7 flex gap-10">
-                <button className="bg-orange-500 p-3 rounded-lg">
-                  <Image src={playstore} />
-                </button>
-                <button className="bg-white p-3 rounded-lg">
-                  <Image src={applestore} />
-                </button>
-              </div>
-            </div>
-            <div className="col1 relative">
-              <Image className="blur-m" src={backgrounoverlay} />
-              <div className="absolute top-3 left-1/2 -translate-x-1/2">
-                <Image src={phonemockup} />
-              </div>
-              <div className="absolute bottom-10 left-1/4 -translate-x-1/2">
-                <Image width={200} src={burger} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <InnovativeSection />
       </section>
       {/* ---------app festure section */}
       <section className="app_features">
-        <div className=" max-w-7xl py-10  my-20 px-10 mx-auto p-5">
-          <div className="app_title text-center">
-            <span className="uppercase text-xs">features</span>
-            <h1 className="text-3xl capitalize ">Awosome features</h1>
-          </div>
-          <div className="row flex gap-10 md:gap-0 flex-col md:flex-row mt-10 justify-evenly">
-            <div className="col1   md:gap-0 relative flex flex-col  justify-evenly  gap-5 ps-7  border-e-2 pe-7">
-              <div className="text-right max-w-lg">
-                <h1 className="font-bold">Near by stores</h1>
-                <p className="text-right text-sm">
-                  Discover Local Stores based on your GPS location
-                </p>
-              </div>
-              <div className="text-right ">
-                <h1 className="font-bold ">Near by stores</h1>
-                <p className="text-sm">
-                  Discover Local Stores based on your GPS location
-                </p>
-              </div>
-              <div className="text-right">
-                <h1 className="font-bold">Near by stores</h1>
-                <p className="text-sm">
-                  Discover Local Stores based on your GPS location
-                </p>
-              </div>
-
-              <div className="absolute line-top -right-2">
-                <Image width={13} src={lindedot} />
-              </div>
-              <div className="absolute -right-2">
-                <Image width={13} src={lindedot} />
-              </div>
-              <div className="absolute line-bottom -right-2">
-                <Image width={13} src={lindedot} />
-              </div>
-            </div>
-
-            <div className="col1    relative ">
-              <Image className="opacity-20" src={backgrounoverlay} />
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 ">
-                <Image width={300} src={fearuresmockup} />
-              </div>
-            </div>
-            <div className="col1  gap-5 relative flex flex-col justify-evenly border-s-2 ps-7">
-              <div className=" max-w-lg">
-                <h1 className="font-bold">Near by stores</h1>
-                <p className="text-left text-sm">
-                  Discover Local Stores based on your GPS location
-                </p>
-              </div>
-              <div className="">
-                <h1 className="font-bold ">Near by stores</h1>
-                <p className="text-sm">
-                  Discover Local Stores based on your GPS location
-                </p>
-              </div>
-              <div className="">
-                <h1 className="font-bold">Near by stores</h1>
-                <p className="text-sm">
-                  Discover Local Stores based on your GPS location
-                </p>
-              </div>
-
-              <div className="absolute line-top -left-2">
-                <Image width={13} src={lindedot} />
-              </div>
-              <div className="absolute -left-2">
-                <Image width={13} src={lindedot} />
-              </div>
-              <div className="absolute line-bottom -left-2">
-                <Image width={13} src={lindedot} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Features />
       </section>
       {/* --------- app download section */}
       <section>

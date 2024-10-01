@@ -7,7 +7,6 @@ import screen2 from "../assests/images/Rectangle 271-portrait.png";
 import screen3 from "../assests/images/Rectangle 272-portrait.png";
 import screen4 from "../assests/images/Rectangle 273-portrait.png";
 import phone from "../assests/images/features-hero-img.png";
-import phonemockup from "../assests/images/image 31.png";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css";
@@ -16,6 +15,7 @@ import "swiper/css/pagination";
 
 import Image from "next/image";
 import { SectionHeader } from "./sectionHeader";
+import { delay } from "framer-motion";
 
 export const ScreenShootPage = () => {
   return (
@@ -27,6 +27,7 @@ export const ScreenShootPage = () => {
           initialSlide={2}
           effect={"coverflow"}
           grabCursor={true}
+          autoplay={{ delay: 2500 }}
           centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{

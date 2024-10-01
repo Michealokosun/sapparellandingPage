@@ -1,10 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import phone from "../assests/images/hero-img.png";
-import floatingfood from "../assests/images/decor1.png";
 import floatingcomp from "../assests/images/Group 578.png";
-import wave from "../assests/images/wave.svg";
-
+import { motion } from "framer-motion";
+const cartvariant = {
+  offscreen: {
+    x: 300,
+  },
+  onscreen: {
+    x: -50,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 2.5,
+    },
+  },
+};
 export const HeroComponent = () => {
   return (
     <div>
@@ -17,7 +30,12 @@ export const HeroComponent = () => {
         </div> */}
         <div className="  flex flex-wrap flex-col md:flex-row justify-between items-center">
           {/* ----------column 1 ------------- */}
-          <div className="mx-auto  max-w-2xl py-36 lg:w-10/12  sm:py-48 lg:py-56">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2, ease: [0.17, 0.67, 0.83, 0.67] }}
+            className="mx-auto  max-w-2xl py-36 lg:w-10/12  sm:py-48 lg:py-56"
+          >
             <div className="mb-4 sm:mb-8 sm:flex sm:justify-center">
               <div className="relative border border-gray-700 rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 Announcing our next round of funding
@@ -51,9 +69,14 @@ export const HeroComponent = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* -----------------column 2 ------------ */}
-          <div className="phone_mockup  hidden xl:block lg:w-4/12 relative p-10 ">
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={cartvariant}
+            className="phone_mockup  hidden xl:block lg:w-4/12 relative p-10 "
+          >
             <div className="  flex justify-center ">
               <Image width={300} alt="hero img" src={phone} />
             </div>
@@ -96,7 +119,7 @@ export const HeroComponent = () => {
             <div className="floating absolute bottom-10 right-0 bg-white p-3 rounded-md items">
               <Image width={200} src={floatingcomp} />
             </div>
-          </div>
+          </motion.div>
         </div>
         <div
           aria-hidden="true"
