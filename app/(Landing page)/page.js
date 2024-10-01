@@ -10,18 +10,21 @@ import phonemockup from "../assests/images/hero-img-shop.png";
 import burger from "../assests/images/burger.png";
 import backgrounoverlay from "../assests/images/hero-right-bg.png";
 import fearuresmockup from "../assests/images/features-hero-img.png";
+import "animate.css";
 
 import lindedot from "../assests/images/Group 570.png";
 import { ScreenShootPage } from "../components/screenshot.component";
 import { Testimonies } from "../components/testimonial_section";
 import { SectionHeader } from "../components/sectionHeader";
 import countactusImage from "../assests/images/image 295.png";
-import Link from "next/link";
 import { Footer } from "../components/footer";
+import { Scrollanimation } from "../components/Scrollanimation";
+import { AppDownlaodSection } from "../components/app_download_section";
 
 export default function Home() {
   return (
     <div className="">
+      <Scrollanimation />
       {/* ------------ navigation section  */}
       <nav>
         <Navbar />
@@ -131,7 +134,7 @@ export default function Home() {
             <h1 className="text-3xl capitalize ">Awosome features</h1>
           </div>
           <div className="row flex gap-10 md:gap-0 flex-col md:flex-row mt-10 justify-evenly">
-            <div className="col1  md:gap-0 relative flex flex-col  justify-evenly  gap-5 ps-7  border-e-2 pe-7">
+            <div className="col1   md:gap-0 relative flex flex-col  justify-evenly  gap-5 ps-7  border-e-2 pe-7">
               <div className="text-right max-w-lg">
                 <h1 className="font-bold">Near by stores</h1>
                 <p className="text-right text-sm">
@@ -162,13 +165,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col1 relative ">
+            <div className="col1    relative ">
               <Image className="opacity-20" src={backgrounoverlay} />
               <div className="absolute top-0 left-1/2 -translate-x-1/2 ">
                 <Image width={300} src={fearuresmockup} />
               </div>
             </div>
-            <div className="col1 gap-5 relative flex flex-col justify-evenly border-s-2 ps-7">
+            <div className="col1  gap-5 relative flex flex-col justify-evenly border-s-2 ps-7">
               <div className=" max-w-lg">
                 <h1 className="font-bold">Near by stores</h1>
                 <p className="text-left text-sm">
@@ -205,89 +208,7 @@ export default function Home() {
       <section>
         <div className="max-w-7xl  py-10  my-20 px-10 mx-auto p-5">
           <SectionHeader subtitle="Downloads" title="app download" />
-
-          <div className="downalod_details flex-wrap mt-16 gap-10 justify-around items-center flex">
-            <div className="box1 w-full relative  bg-white px-5 text-black pe-28 py-2 ">
-              <h1 className="font-extrabold ">1000</h1>
-              <p className="text-xs uppercase ">App download</p>
-              <div className="icon bg-orange-600 p-2 absolute -top-5 right-3 rounded-full inline-block">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-7 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9.75v6.75m0 0-3-3m3 3 3-3m-8.25 6a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="box2 w-full relative bg-white px-5 py-2 text-black ">
-              <h1 className="font-extrabold ">2000</h1>
-              <p className="text-xs uppercase">Happy client</p>
-              <div className="icon bg-orange-600 p-2 absolute -top-5 right-3 rounded-full inline-block">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-7 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="box3 relative w-full bg-white px-5 py-2 text-black ">
-              <h1 className="font-extrabold ">4000</h1>
-              <p className="uppercase text-xs ">Active Account</p>
-              <div className="icon bg-orange-600 p-2 absolute -top-5 right-3 rounded-full inline-block">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-7 text-white"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="box4 w-full relative bg-white py-2 px-5 text-black ">
-              <h1 className="font-extrabold ">2000</h1>
-              <p className="text-xs uppercase"> total App rates </p>
-              <div className="icon bg-orange-600 p-2 absolute -top-5 right-3 rounded-full inline-block">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-7 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+          <AppDownlaodSection />
         </div>
       </section>
       {/* ---------app screenshot section */}

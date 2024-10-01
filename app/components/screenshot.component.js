@@ -2,11 +2,11 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import screen1 from "../assests/images/Rectangle 272.png";
-import screen2 from "../assests/images/Rectangle 273.png";
-import screen3 from "../assests/images/Rectangle 271.png";
-import screen4 from "../assests/images/Rectangle 270.png";
-import phone from "../assests/images/Rectangle 64.png";
+import screen1 from "../assests/images/Rectangle 270-portrait.png";
+import screen2 from "../assests/images/Rectangle 271-portrait.png";
+import screen3 from "../assests/images/Rectangle 272-portrait.png";
+import screen4 from "../assests/images/Rectangle 273-portrait.png";
+import phone from "../assests/images/features-hero-img.png";
 import phonemockup from "../assests/images/image 31.png";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 // import Swiper and modules styles
@@ -56,9 +56,12 @@ export const ScreenShootPage = () => {
             <Image src={screen4} />
           </SwiperSlide>
         </Swiper>
-        <div className="absolute screenshot_phone -top-8 left-1/2 -translate-x-1/2">
-          <Image width={250} src={phonemockup} />
-        </div>
+        {/* <div
+          id="phone"
+          className="absolute screenshot_phone -top-8 left-1/2 -translate-x-[39%]"
+        >
+          <Image width={200} src={phonemockup} />
+        </div> */}
       </div>
     </div>
   );
