@@ -15,14 +15,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Image from "next/image";
+import { SectionHeader } from "./sectionHeader";
 
 export const ScreenShootPage = () => {
   return (
     <div className="max-w-7xl py-20 mx-auto my-10 px-10">
-      <div className="app_title text-center">
-        <span className="uppercase text-xs text-orange-500">ScreenShots</span>
-        <h1 className="text-3xl capitalize ">App screenshots </h1>
-      </div>
+      <SectionHeader subtitle="ScreenShots" title="App screenshots" />
 
       <div className="screen_shoot_mockup mt-10  max-w-4xl relative    mx-auto flex gap-10 justify-between">
         <Swiper

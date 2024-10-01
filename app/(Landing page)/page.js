@@ -13,6 +13,11 @@ import fearuresmockup from "../assests/images/features-hero-img.png";
 
 import lindedot from "../assests/images/Group 570.png";
 import { ScreenShootPage } from "../components/screenshot.component";
+import { Testimonies } from "../components/testimonial_section";
+import { SectionHeader } from "../components/sectionHeader";
+import countactusImage from "../assests/images/image 295.png";
+import Link from "next/link";
+import { Footer } from "../components/footer";
 
 export default function Home() {
   return (
@@ -199,12 +204,7 @@ export default function Home() {
       {/* --------- app download section */}
       <section>
         <div className="max-w-7xl  py-10  my-20 px-10 mx-auto p-5">
-          <div className="download_title text-center ">
-            <span className="text-orange-500 border-b-2 text-xs uppercase border-orange-500">
-              Downloads
-            </span>
-            <h1 className="text-4xl capitalize mt-2">App download</h1>
-          </div>
+          <SectionHeader subtitle="Downloads" title="app download" />
 
           <div className="downalod_details flex-wrap mt-16 gap-10 justify-around items-center flex">
             <div className="box1 w-full relative  bg-white px-5 text-black pe-28 py-2 ">
@@ -343,11 +343,61 @@ export default function Home() {
         </div>
       </section>
       {/* -------- client review section */}
-      <section></section>
+      <section>
+        <Testimonies />
+      </section>
       {/* --------contact us section */}
-      <section></section>
+      <section className="contacus relative">
+        <div className="absolute top-1/4  -z-10">
+          <Image
+            className=" w-80 object-contain hidden md:block"
+            src={countactusImage}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto p-10">
+          <SectionHeader subtitle="Contact us" title="get in touch with us!" />
+
+          <form
+            className="flex justify-center gap-4    items-center flex-col"
+            action=""
+          >
+            <div className="name max-w-2xl w-full md:w-1/2">
+              <input
+                className="p-2 rounded-md placeholder:text-sm border-none outline-none text-gray-400 w-full"
+                type="text"
+                placeholder="Your Name"
+              />
+            </div>
+            <div className="email max-w-2xl w-full md:w-1/2">
+              <input
+                className="p-2 text-gray-400 placeholder:text-sm  rounded-md border-none outline-none w-full"
+                type="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <div className="textarea  max-w-2xl w-full md:w-1/2">
+              <textarea
+                rows={8}
+                placeholder="Your Message"
+                className="p-2 text-gray-400 placeholder:text-sm rounded-md border-none outline-none w-full"
+                name="message"
+              ></textarea>
+            </div>
+            <div className="  max-w-2xl text-center w-full md:w-1/2">
+              <button
+                className=" flex-1  py-2 px-5 rounded-full bg-orange-500"
+                type="submit"
+              >
+                send now
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
       {/* ----------footer section */}
-      <footer></footer>
+      <footer className="bg-zinc-900">
+        <Footer />
+      </footer>
     </div>
   );
 }
